@@ -1,6 +1,6 @@
 import React from "react";
-import "./App.css";
-import InfoForm from "./components/InfoForm";
+import "./App.scss";
+import { InfoForm } from "./components";
 
 function App() {
   return (

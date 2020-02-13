@@ -1,19 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames/bind";
-import styles from "./Button.css";
-
-let cx = classNames.bind(styles);
+import { FaRobot } from "react-icons/fa";
+import styles from "./Banner.module.scss";
 
 export default function Banner(props) {
   const { name, title, message } = props;
   return (
-    <div className={cx}>
-      <div>{name}</div>
-      <div>
-        {title}
-        {message}
+    <div className={styles.container}>
+      <div className={styles.name}>
+        <FaRobot size={26} />
+        {name}
       </div>
+      <div className={styles.title}>{title}</div>
+      <div className={styles.message}>{message}</div>
     </div>
   );
 }

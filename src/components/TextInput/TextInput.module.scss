@@ -1,0 +1,49 @@
+@import "~styles/color";
+@import "~styles/layout";
+
+%label-text {
+  font-family: "Merriweather-Regular";
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  width: 100%;
+  border-radius: 0.375rem;
+  height: 3rem;
+  outline: none;
+  padding-left: 1rem;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.container:empty {
+  background-color: #f7f7f7;
+  border: 1px solid #eaeaea;
+}
+
+.container:focus {
+  border: 1px solid #00adee;
+  background-color: white;
+}
+
+.container:required {
+  border: #e70000 solid 1px;
+  background-color: white;
+}
+
+// .container:required {
+//   border: 1px solid #e70000;
+//   background-color: white;
+// }
+
+.label {
+  color: #666666;
+  @extend %label-text;
+}
+
+.requiredText {
+  color: #e70000;
+  @extend %label-text;
+}
