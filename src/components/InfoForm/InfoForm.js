@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import { withTranslation } from "react-i18next";
 import { Banner, TextInput } from "../";
-import { Button, TextField } from "@material-ui/core";
 import styles from "./InfoForm.module.scss";
-import { FaArrowRight } from "react-icons/fa";
+import arrowSvg from "../../assets/White_Arrow.svg";
 
-export default class InfoForm extends Component {
+class InfoForm extends Component {
   constructor(props) {
     super(props);
 
@@ -66,13 +65,11 @@ export default class InfoForm extends Component {
 
   render() {
     const { valid } = this.state;
+    const { t } = this.props;
+
     return (
       <div className={styles.container}>
-        <Banner
-          name="GIANT ROBOT LTD."
-          title="Welcome"
-          message="Please tell us a bit about yourself to get started"
-        />
+        <Banner title={t("banner.title")} message={t("banner.message")} />
         <form
           className={styles.form}
           onSubmit={this.handleSubmit}
@@ -81,35 +78,38 @@ export default class InfoForm extends Component {
         >
           <TextInput
             name="firstName"
-            label="FIRST NAME"
+            label={t("form.firstName")}
             required
             valid={valid.firstName}
             onChange={this.handleChange}
           />
           <TextInput
             name="lastName"
-            label="LAST NAME"
+            label={t("form.lastName")}
             required
             valid={valid.lastName}
             onChange={this.handleChange}
           />
           <TextInput
             name="address"
-            label="ADDRESS"
+            label={t("form.address")}
             required
             valid={valid.address}
             onChange={this.handleChange}
           />
           <TextInput
             name="additionalAddress"
-            label="ADDRESS (OPTIONAL)"
+            label={t("form.additionalAddress")}
             onChange={this.handleChange}
           />
           <button className={styles.button} type="submit">
-            Next <FaArrowRight />
+            {t("form.next")}
+            <img src={arrowSvg} className={styles.arrow} alt="next arrow" />
           </button>
         </form>
       </div>
     );
   }
 }
+
+export default withTranslation("common")(InfoForm);

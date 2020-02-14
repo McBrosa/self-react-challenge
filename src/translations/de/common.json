@@ -1,0 +1,14 @@
+{
+  "banner": {
+    "title": "Willkommen",
+    "message": "Bitte erzählen Sie uns etwas über sich, um loszulegen."
+  },
+  "form": {
+    "firstName": "VORNAME",
+    "lastName": "FAMILIENNAME, NACHNAME",
+    "address": "ADRESSE",
+    "additionalAddress": "ADRESSE (OPTIONAL)",
+    "next": "Nächster",
+    "required": "ERFORDERLICH"
+  }
+}

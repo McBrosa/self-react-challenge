@@ -1,12 +1,12 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "./App.scss";
 import { InfoForm } from "./components";
 
 function App() {
   return (
-    <div className="App">
+    <Suspense fallback={<div>Loading...</div>}>
       <InfoForm />
-    </div>
+    </Suspense>
   );
 }
 

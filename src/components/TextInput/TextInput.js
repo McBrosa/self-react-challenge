@@ -1,18 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
+import { Translation } from "react-i18next";
 import styles from "./TextInput.module.scss";
 
-export default class TextInput extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  renderLabel() {
-    const { label, required, valid } = this.props;
+const TextInput = params => {
+  const renderLabel = () => {
+    const { label, required, valid } = params;
     const requiredLabel =
       required && !valid ? (
-        <span className={styles.requiredText}>REQUIRED</span>
+        <span className={styles.requiredText}>
+          <Translation ns="common">{t => t("form.required")}</Translation>
+        </span>
       ) : (
         ""
       );
@@ -22,25 +20,23 @@ export default class TextInput extends Component {
         {label} {requiredLabel}
       </p>
     );
-  }
+  };
 
-  render() {
-    const { valid, required, name, onChange } = this.props;
+  const { valid, required, name, onChange } = params;
 
-    return (
-      <div>
-        {this.renderLabel()}
-        <input
-          className={styles.container}
-          name={name}
-          type="text"
-          onInput={onChange}
-          required={required && !valid}
-        ></input>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      {renderLabel()}
+      <input
+        className={styles.container}
+        name={name}
+        type="text"
+        onInput={onChange}
+        required={required && !valid}
+      ></input>
+    </div>
+  );
+};
 
 TextInput.propTypes = {
   label: PropTypes.string,
@@ -55,3 +51,5 @@ TextInput.defaultProps = {
   required: false,
   valid: true
 };
+
+export default TextInput;

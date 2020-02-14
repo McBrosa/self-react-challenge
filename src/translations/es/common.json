@@ -1,0 +1,14 @@
+{
+  "banner": {
+    "title": "Bienvenido",
+    "message": "Cuéntanos un poco sobre ti para comenzar."
+  },
+  "form": {
+    "firstName": "NOMBRE DE PILA",
+    "lastName": "APELLIDO",
+    "address": "DIRECCIÓN",
+    "additionalAddress": "DIRECCIÓN (OPCIONAL)",
+    "next": "Siguiente",
+    "required": "NECESARIO"
+  }
+}

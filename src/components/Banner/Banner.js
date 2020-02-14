@@ -1,16 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaRobot } from "react-icons/fa";
+import robotSvg from "../../assets/GiantRobotLTD_Logo.svg";
 import styles from "./Banner.module.scss";
 
 export default function Banner(props) {
-  const { name, title, message } = props;
+  const { title, message } = props;
   return (
     <div className={styles.container}>
-      <div className={styles.name}>
-        <FaRobot size={26} />
-        {name}
-      </div>
+      <img src={robotSvg} className={styles.logo} alt="robot head" />
       <div className={styles.title}>{title}</div>
       <div className={styles.message}>{message}</div>
     </div>
@@ -18,7 +15,6 @@ export default function Banner(props) {
 }
 
 Banner.propTypes = {
-  name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   message: PropTypes.string
 };

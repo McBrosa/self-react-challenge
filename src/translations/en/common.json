@@ -1,0 +1,13 @@
+{
+  "banner": {
+    "title": "Welcome",
+    "message": "Please tell us a bit about yourself to get started."
+  },
+  "form": {
+    "firstName": "FIRST NAME",
+    "lastName": "LAST NAME",
+    "address": "ADDRESS",
+    "additionalAddress": "ADDRESS (OPTIONAL)",
+    "next": "Next"
+  }
+}
