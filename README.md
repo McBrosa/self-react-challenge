@@ -9,6 +9,12 @@ In the project directory, you can run:
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+App supported languages:
+
+- English [http://localhost:3000/?lng=en](http://localhost:3000/?lng=en)
+- Spanish [http://localhost:3000/?lng=es](http://localhost:3000/?lng=es)
+- German [http://localhost:3000/?lng=de](http://localhost:3000/?lng=de)
+
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 

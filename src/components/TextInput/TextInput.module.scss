@@ -12,33 +12,33 @@
   border-radius: 0.375rem;
   height: 3rem;
   outline: none;
-  padding-left: 1rem;
+  text-indent: 1rem;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
 
 .container:empty {
-  background-color: #f7f7f7;
-  border: 1px solid #eaeaea;
+  background-color: $off-white;
+  border: 1px solid $egg-white;
 }
 
 .container:focus {
-  border: 1px solid #00adee;
+  border: 1px solid $sky-blue;
   background-color: white;
 }
 
 .container:required {
-  border: #e70000 solid 1px;
+  border: $red solid 1px;
   background-color: white;
 }
 
 .label {
-  color: #666666;
+  color: $darker-grey;
   @extend %label-text;
 }
 
 .requiredText {
-  color: #e70000;
+  color: $red;
   @extend %label-text;
 }

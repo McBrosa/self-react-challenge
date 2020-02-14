@@ -8,6 +8,7 @@
     "lastName": "LAST NAME",
     "address": "ADDRESS",
     "additionalAddress": "ADDRESS (OPTIONAL)",
-    "next": "Next"
+    "next": "Next",
+    "required": "REQUIRED"
   }
 }
